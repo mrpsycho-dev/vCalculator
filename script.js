@@ -24,10 +24,13 @@ const rightSymbols = ['÷', '×', '-', '+', '='];
 const topSymbols = ['AC', '+/-', '%'];
 const display = document.querySelector('.display');
 
-let a = 0;
-let b = null;
-let operator = null;
-
+let a, b, operator, numA, numB;
+const clearAll = function () {
+  a = 0;
+  b = null;
+  operator = null;
+};
+clearAll();
 for (let i = 0; i < buttonValues.length; i++) {
   // Create buttons
   let value = buttonValues[i];
@@ -48,13 +51,34 @@ for (let i = 0; i < buttonValues.length; i++) {
   // Listen clicks
   button.addEventListener('click', function () {
     if (rightSymbols.includes(value)) {
+      if (value === '=' && a != null) {
+        b = display.value;
+        numA = Number(a);
+        numB = Number(b);
+
+        if (operator === '÷') {
+          display.value = a / b;
+        } else if (operator === '×') {
+          display.value = a * b;
+        } else if (operator === '-') {
+          display.value = a - b;
+        } else if (operator === '+') {
+          display.value = a + b;
+        }
+        clearAll();
+      } else {
+        operator = value;
+        a = display.value;
+        display.value = '';
+      }
     } else if (topSymbols.includes(value)) {
       if (value === 'AC') {
         display.value = '';
+        clearAll();
       } else if (value === '+/-') {
-        display.value = Number(display.value * -1);
+        display.value = Number(display.value) * -1;
       } else if (value === '%') {
-        display.value = display.value / 100;
+        display.value = Number(display.value) / 100;
       }
     }
     // Numbers
