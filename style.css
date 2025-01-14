@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.calculator {
+  background-color: #1c1c1c;
+  width: 400px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  /* padding: 8px; */
+}
+
+.buttons button {
+  background-color: #505050;
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  border: none;
+}
