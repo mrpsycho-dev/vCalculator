@@ -49,6 +49,9 @@ for (let i = 0; i < buttonValues.length; i++) {
   button.addEventListener('click', function () {
     if (rightSymbols.includes(value)) {
     } else if (topSymbols.includes(value)) {
+      if (value === 'AC') {
+        display.value = '';
+      }
     }
     // Numbers
     else {
