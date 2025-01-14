@@ -45,6 +45,24 @@ for (let i = 0; i < buttonValues.length; i++) {
     button.style.backgroundColor = '#D4D4D2';
     button.style.color = '#1c1c1c';
   }
+  // Listen clicks
+  button.addEventListener('click', function () {
+    if (rightSymbols.includes(value)) {
+    } else if (topSymbols.includes(value)) {
+    }
+    // Numbers
+    else {
+      if (value === '.') {
+        if (display.value !== '' && !display.value.includes(value)) {
+          display.value += value;
+        }
+      } else if (display.value === '0') {
+        display.value = value;
+      } else {
+        display.value += value;
+      }
+    }
+  });
 
   // Add created buttons in HTML
   document.querySelector('.buttons').appendChild(button);
