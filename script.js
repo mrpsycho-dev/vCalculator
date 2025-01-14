@@ -84,7 +84,11 @@ for (let i = 0; i < buttonValues.length; i++) {
     // Numbers
     else {
       if (value === '.') {
-        if (display.value !== '' && !display.value.includes(value)) {
+        if (
+          display.value !== '' &&
+          !display.value.includes(value)
+          // && !display.value[0].includes('0')
+        ) {
           display.value += value;
         }
       } else if (display.value === '0') {

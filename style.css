@@ -28,6 +28,8 @@ body {
   font-size: 90px;
   max-width: 100%;
   border: none;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 10px;
   /* outline: none; */
 }
 
