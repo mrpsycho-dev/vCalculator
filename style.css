@@ -5,13 +5,28 @@
 }
 
 body {
-  background-color: #1c1c1c;
+  /* background-color: #1c1c1c; */
   color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator {
   background-color: #1c1c1c;
   width: 400px;
+  padding: 60px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.display {
+  background-color: #1c1c1c;
+  text-align: right;
+  font-size: 90px;
+  max-width: 100%;
+  border: none;
+  /* outline: none; */
 }
 
 .buttons {
