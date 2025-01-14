@@ -57,13 +57,13 @@ for (let i = 0; i < buttonValues.length; i++) {
         numB = Number(b);
 
         if (operator === '÷') {
-          display.value = a / b;
+          display.value = numA / numB;
         } else if (operator === '×') {
-          display.value = a * b;
+          display.value = numA * numB;
         } else if (operator === '-') {
-          display.value = a - b;
+          display.value = numA - numB;
         } else if (operator === '+') {
-          display.value = a + b;
+          display.value = numA + numB;
         }
         clearAll();
       } else {
@@ -87,7 +87,7 @@ for (let i = 0; i < buttonValues.length; i++) {
         if (
           display.value !== '' &&
           !display.value.includes(value)
-          // && !display.value[0].includes('0')
+          // !display.value.includes('0')
         ) {
           display.value += value;
         }
