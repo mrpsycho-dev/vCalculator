@@ -53,6 +53,8 @@ for (let i = 0; i < buttonValues.length; i++) {
         display.value = '';
       } else if (value === '+/-') {
         display.value = Number(display.value * -1);
+      } else if (value === '%') {
+        display.value = display.value / 100;
       }
     }
     // Numbers
