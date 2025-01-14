@@ -51,6 +51,8 @@ for (let i = 0; i < buttonValues.length; i++) {
     } else if (topSymbols.includes(value)) {
       if (value === 'AC') {
         display.value = '';
+      } else if (value === '+/-') {
+        display.value = Number(display.value * -1);
       }
     }
     // Numbers
