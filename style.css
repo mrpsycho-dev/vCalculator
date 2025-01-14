@@ -31,3 +31,10 @@ body {
   border-radius: 50px;
   border: none;
 }
+
+.buttons button:hover {
+  opacity: 70%;
+}
+.buttons button:active {
+  opacity: 90%;
+}
