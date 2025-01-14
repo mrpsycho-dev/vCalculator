@@ -26,9 +26,9 @@ const display = document.querySelector('.display');
 
 let a, b, operator, numA, numB;
 const clearAll = function () {
-  a = 0;
-  b = null;
-  operator = null;
+  a = [];
+  b = [];
+  operator = [];
 };
 clearAll();
 for (let i = 0; i < buttonValues.length; i++) {
